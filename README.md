@@ -49,7 +49,7 @@ On your android mobile, you will see those interface :
  ![8](img/8.png)
 
 ### Tips
-This whole project was executed on MacOs High Sierra version 10.13.6
+This whole project was executed on MacOs High Sierra version 10.13.6 and as code editor I used VSC ( Visual Studio Code ).
 
 You could run the project also in iOS mobile. Due to dependency and version issues on my device, I couldn't manage this environment
 You could follow this [guide](https://ionicframework.com/docs/angular/your-first-app/6-deploying-mobile).
