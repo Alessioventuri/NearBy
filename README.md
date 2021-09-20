@@ -1,7 +1,12 @@
-ENG
+
 # NearBy
+
 Mobile application developed with Ionic. 
-The goal of this project is to offer users the opportunity to know which points of interest such as generic shops and restaurants surround them and to reach them in the center / station area.
+The goal of this project is to offer users the opportunity to know the points of interest located in the center / station area, such as generic shops and restaurants, that surround them and how to reach them.
+
+Link to the whole [paper](HCI_final.pdf)
+
+
 
 ### Dependencies
  * [Ionic 6.16.3](https://www.npmjs.com/package/@ionic/cli/v/6.16.3)
@@ -17,6 +22,8 @@ Inside Ionic, we have installed some dependecies like angular, geolocation
 To use my database, you have to contact me. I will give you the credentials to use Google Firebase and Google Cloud Platform.
 
 ### Usage 
+
+ENG 
 
 To use locally, you have to download the project. Once downloaded, open the terminal and go to the project folder.
  * `cd Nearby`
@@ -39,4 +46,10 @@ On your android mobile, you will see those interface :
  ![2](img/2.png)
  ![6](img/6.png)
  ![8](img/8.png)
+
+### Tips
+This whole project was executed on MacOs High Sierra version 10.13.6
+
+You could run the project also in Ios mobile. Due to dependency and version issues on my device, I couldn't manage this environment
+You could follow this [guide](https://ionicframework.com/docs/angular/your-first-app/6-deploying-mobile).
 
