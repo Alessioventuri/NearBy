@@ -3,9 +3,10 @@
 
 Mobile application developed with Ionic. 
 The goal of this project is to offer users the opportunity to know the points of interest located in the center / station area, such as generic shops and restaurants, that surround them and how to reach them.
+The language of the application is Italian because it was designed to be used initially in my actual city.
 
-Link to the whole [paper](HCI_final.pdf)
 
+Link to the whole [paper](HCI_final.pdf) Available only in italian
 
 
 ### Dependencies
@@ -22,8 +23,6 @@ Inside Ionic, we have installed some dependecies like angular, geolocation
 To use my database, you have to contact me. I will give you the credentials to use Google Firebase and Google Cloud Platform.
 
 ### Usage 
-
-ENG 
 
 To use locally, you have to download the project. Once downloaded, open the terminal and go to the project folder.
  * `cd Nearby`
