@@ -20,7 +20,9 @@ Inside Ionic, we have installed some dependecies like angular, geolocation
 
 ### Pre-requisited
 
-To use my database, you have to contact me. I will give you the credentials to use Google Firebase and Google Cloud Platform.
+In `src/environment` folder, you can put your Firebase credentials in both files. Also in `src/app/map/map.page.ts` file, in the function `showMap()` you have to put your mapId.
+To use my database, contact me. I will give you the credentials to use Google Firebase and Google Cloud Platform ( my mapId ).
+
 
 ### Usage 
 
