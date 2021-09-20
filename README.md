@@ -31,10 +31,12 @@ To run the project in Android mobile, you have to download the project. Once dow
  * `ionic cap open android`
 
 Android studio is now open. Connect you android mobile, check if it is connected and press play to install the project in your android mobile.
+
+### Screenshot
 On your android mobile, you will see those interface :
 
- * ![1](img/1.png)
- * ![2](img/2.png)
- * ![6](img/6.png)
- * ![8](img/8.png)
+ ![1](img/1.png)
+ ![2](img/2.png)
+ ![6](img/6.png)
+ ![8](img/8.png)
 
