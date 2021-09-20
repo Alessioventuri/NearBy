@@ -427,7 +427,7 @@
           center : latLng,
           zoom : 18,
           disableDefaultUI: true,
-          mapId: '8edbd8f133591a22',
+          mapId: 'xxxxxxxxxxxxxx',
         }
         this.map = new google.maps.Map(this.mapRef.nativeElement, options);
         this.setPosition(this.currentPosition);
