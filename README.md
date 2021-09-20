@@ -2,7 +2,7 @@
 # NearBy
 
 Mobile application developed with Ionic. 
-The goal of this project is to offer users the opportunity to know the points of interest located in the center / station area, such as generic shops and restaurants, that surround them and how to reach them.
+The goal of this project is to offer users the opportunity to know the points of interest located in the center / station area of your city, such as generic shops and restaurants, that surround them and how to reach them.
 The language of the application is Italian because it was designed to be used initially in my actual city.
 
 
