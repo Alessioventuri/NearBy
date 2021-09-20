@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h4  style="text-align: center;"> <strong>Cosa stai cercando?</strong></h4>
+ <ion-grid>
+  <ion-button (click)="showFood()" type="button" size=large color="success" expand="block" ><ion-icon class=icon name="fast-food-outline"></ion-icon></ion-button>
+  <ion-list *ngIf="showfood">
+    <ion-item   lines="full" >
+      <ion-grid>
+      <ion-button [routerLink]="['/ristoranti']" type="button" size=medium color="success" expand="block"> Ristoranti </ion-button>
+      <ion-button [routerLink]="['/pizzerie']" type="button" size=medium color="success" expand="block"> Pizzerie </ion-button>
+      <ion-button [routerLink]="['/bar']" type="button" size=medium color="success" expand="block"> Bar </ion-button>
+      <ion-button [routerLink]="['/gelaterie']" type="button" size=medium color="success"  expand="block"> Gelaterie </ion-button>
+      <ion-button [routerLink]="['/altro']" type="button" size=medium color="success" expand="block"> Altro </ion-button>
+      </ion-grid>
+    </ion-item>
+  </ion-list> 
+  <ion-button (click)="showShop()" type="button" size=large  color="success" expand="block"><ion-icon class=icon name="storefront-outline"></ion-icon></ion-button>
+    <ion-list *ngIf="showshop">
+      <ion-item  lines="full" >
+        <ion-grid>
+          <ion-button [routerLink]="['/tabaccheria']" type="button" size=medium color="success" expand="block"> Tabaccheria </ion-button>
+          <ion-button [routerLink]="['/gioielleria']" type="button" size=medium color="success" expand="block"> Gioielleria </ion-button>
+          <ion-button [routerLink]="['/abbigliamento']" type="button" size=medium color="success" expand="block"> Abbigliamento </ion-button>
+          <ion-button [routerLink]="['/ottica']" type="button" size=medium color="success" expand="block"> Ottica </ion-button>
+          <ion-button [routerLink]="['/parrucchiere']" type="button" size=medium color="success" expand="block"> Parrucchiere </ion-button>
+          <ion-button [routerLink]="['/vario']" type="button" size=medium color="success" expand="block"> Vario </ion-button>
+        </ion-grid>
+      </ion-item>
+  </ion-list> 
+</ion-grid>
+<div >
+  
+  <h1 class="prova"  style="text-align: center;"> NEAR BY</h1>
+</div>
+</ion-content>

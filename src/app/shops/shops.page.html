@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" ></ion-back-button>
+    </ion-buttons>
+    <ion-title><h6>Shops</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar
+        showcancelbutton=""
+        (ionInput)="filterList($event)">
+      </ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-progress-bar type="indeterminate" *ngIf="showLoader"></ion-progress-bar>
+  </ion-grid>
+  <ion-list  *ngIf="show">
+    <ion-item *ngFor= "let shop of shopList" lines="full" (click)="presentAlertSuccess(shop)">
+      <ion-label>
+        <strong>{{shop.title}}</strong>
+        <p >{{shop.description}}</p>
+        <p>{{shop.address}}, {{shop.civic_number}}, {{shop.city}}</p>
+        <p *ngIf="show">{{shop.distance}} m ({{shop.time}} min ) </p>
+      </ion-label>
+      <div item-end>
+        <button (click)="navigate(shop.lat,shop.lng)">
+          <ion-icon name="navigate" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-fab  vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button routerLink="/email"><ion-icon name="add"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

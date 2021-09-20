@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Vicino a Me
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h5  style="text-align: center;"> <strong>Quanto tempo libero hai?</strong></h5>
+  <form [formGroup]="timeForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item>
+      <ion-label>Tempo</ion-label>
+      <ion-select formControlName="time" required interface="popover">
+        <ion-select-option value="10" >10 min</ion-select-option>
+        <ion-select-option value="30" >30 min</ion-select-option>
+        <ion-select-option value="60" >1 h</ion-select-option>
+        <ion-select-option value="90" >1:30 h</ion-select-option>
+        <ion-select-option value="120" >2 h</ion-select-option>
+        <ion-select-option value="150" >2:30 h</ion-select-option>
+        <ion-select-option value="180" > 3 h </ion-select-option>
+
+      </ion-select>
+    </ion-item> 
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.time.errors?.required">
+      Quanto tempo libero hai?
+    </span>
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select formControlName="type" interface="popover" required >
+        <ion-select-option value="restaurants" >Cibi e Bevande</ion-select-option>
+        <ion-select-option value="shops" >Negozio</ion-select-option>
+      </ion-select>
+    </ion-item> 
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.type.errors?.required">
+     Quale categoria stai cercando?
+    </span>
+    <ion-row>
+      <ion-progress-bar type="indeterminate" *ngIf="showLoader"></ion-progress-bar>
+    </ion-row>
+  <ion-button type="submit" color="success" expand="block">Cerca</ion-button>
+  <ion-list *ngIf="show">
+    <ion-item  *ngFor= "let restaurant of foodList" lines="full" >
+      <ion-label  (click)="presentAlertSuccess(restaurant)">
+        <strong>{{restaurant.title}}</strong>
+        <p>{{restaurant.description}}</p>
+        <p>{{restaurant.address}}, {{restaurant.civic_number}}, {{restaurant.city}}</p>
+        <p>{{restaurant.time}} minuti</p>
+      </ion-label>
+    <div item-end>
+      <button (click)="navigate(restaurant.address,restaurant.civic_number,restaurant.city)">
+        <ion-icon name="navigate" style="zoom:1.5"></ion-icon>
+      </button>
+    </div>
+  </ion-item>
+  </ion-list>
+  </form>
+</ion-content>

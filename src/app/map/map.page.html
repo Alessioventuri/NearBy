@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Mappa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div #map id="map"></div>
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button color='success'>Mostra</ion-fab-button>
+  <ion-fab-list side="end">
+    <ion-fab-list side="top">
+      <ion-button color="success" (click)=showRestaurants(Restaurants)><ion-icon name="restaurant-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showPizza(Shops)><ion-icon name="pizza-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showCafe(Shops)><ion-icon name="cafe-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showIce(Shops)><ion-icon name="ice-cream-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showOther(Shops)>Etc</ion-button>
+    </ion-fab-list>
+  </ion-fab-list>
+  <ion-fab-list side="start">
+    <ion-fab-list side="top">
+      <ion-button color="success" (click)=showSiga(Shops)><ion-icon name="ticket-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showJewel(Shops)><ion-icon name="diamond-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showDress(Shops)><ion-icon name="shirt-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showGlasses(Shops)><ion-icon name="glasses-outline"></ion-icon></ion-button>
+      <ion-button color="success" (click)=showHair(Shops)>Hair</ion-button>
+      <ion-button color="success" (click)=showVario(Shops)>Etc</ion-button>
+    </ion-fab-list>
+  </ion-fab-list>
+  <ion-fab-list side="top">
+    <ion-button color="success" (click)=hideAll()><ion-icon name="trash-outline"></ion-icon></ion-button>
+  </ion-fab-list>
+
+</ion-fab>
+</ion-content>

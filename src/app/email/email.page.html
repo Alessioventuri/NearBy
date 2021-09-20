@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" ></ion-back-button>
+    </ion-buttons>
+    <ion-title><h6>Contattami</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item>
+      <ion-label position="floating"><h5>Categoria?</h5></ion-label>
+      <ion-select formControlName="type" required >
+        <ion-select-option value="restaurants" >Cibo</ion-select-option>
+        <ion-select-option value="shops" >Negozio</ion-select-option>
+      </ion-select>
+    </ion-item> 
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.type.errors?.required">
+      Seleziona una categoria.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.name.errors?.required">
+      Nome richiesto.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" required></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.email.errors?.required">
+      Email richiesta.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Nome dell'attività</ion-label>
+      <ion-input formControlName="title" type="text" required></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.title.errors?.required">
+      Nome attività richiesto.
+    </span>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.title.errors?.minlength">
+      Lunghezza nome attività almeno 3 caratteri.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Descrizione</ion-label>
+      <ion-input formControlName="description" type="text"></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.description.errors?.required">
+      Descrizione richiesta.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Indirizzo</ion-label>
+      <ion-input formControlName="address" type="text"></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.address.errors?.required">
+      Indirizz richiesto.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Numero civico</ion-label>
+      <ion-input formControlName="civic_number" type="text" required></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.civic_number.errors?.required">
+      Numero civico richiesto.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Città</ion-label>
+      <ion-input maxlength="15" formControlName="city" type="text"></ion-input>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.city.errors?.required">
+      Città richiesta.
+    </span>
+    <ion-item>
+      <ion-label position="floating">Motivazione</ion-label>
+      <ion-textarea formControlName="reason"></ion-textarea>
+    </ion-item>
+    <span class="error-ion-padding" *ngIf="submitted && errorCtr.reason.errors?.required">
+      La Motivazione è richiesta.
+    </span>
+    <ion-row>
+      <ion-col>
+        <ion-button [disabled]="isLoading" type="submit" color="success" expand="block">Invia</ion-button>
+        <ion-input formControlName="honeypot" type="text"></ion-input>      </ion-col>
+    </ion-row>
+
+  </form>
+  <div ngClass="!submitted? 'hidden' : 'visible'" class="center-text">
+    <span>{{responseMessage}}</span>
+  </div>
+</ion-content>

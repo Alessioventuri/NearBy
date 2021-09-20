@@ -1,0 +1,8 @@
+{
+  "name": "NearBy",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

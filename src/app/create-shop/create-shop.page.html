@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" ></ion-back-button>
+    </ion-buttons>
+    <ion-title><h6>Nuova Attività </h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="shopForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item>
+      <ion-label>Seleziona..</ion-label>
+      <ion-select formControlName="kind" interface="popover" required >
+        <ion-select-option value="restaurants" >Cibo</ion-select-option>
+        <ion-select-option value="shops" >Negozio</ion-select-option>
+      </ion-select>
+    </ion-item> 
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.kind.errors?.required">
+      Quale categoria stai aggiungendo?
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Nome Attività</ion-label>
+      <ion-input formControlName="title" type="text" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.title.errors?.required">
+      Nome attività richiesto.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.title.errors?.minlength">
+      La lunghezza deve essere almeno 3 caratteri.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Descrizione</ion-label>
+      <ion-input formControlName="description" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.description.errors?.required">
+      Descrizione richiesta.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Indirizzo</ion-label>
+      <ion-input formControlName="address" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.address.errors?.required">
+      Indirizzo richiesto.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Numero civico</ion-label>
+      <ion-input formControlName="civic_number" type="text" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.civic_number.errors?.required">
+      Numero civico richiesto.
+    </span>
+    <ion-item lines="full">
+      <ion-label position="floating">Città</ion-label>
+      <ion-input maxlength="15" formControlName="city" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.city.errors?.required">
+      Città richiesta
+    </span>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Invia</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

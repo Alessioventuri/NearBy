@@ -1,0 +1,46 @@
+ 
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" ></ion-back-button>
+    </ion-buttons>
+    <ion-title><h6>Food</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar
+        showcancelbutton=""
+        (ionInput)="filterList($event)">
+      </ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-progress-bar type="indeterminate" *ngIf="showLoader"></ion-progress-bar>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list *ngIf='show'>
+    <ion-item *ngFor= "let restaurant of foodList" lines="full"  >
+      <ion-label (click)="presentAlertSuccess(restaurant)">
+        <strong>{{restaurant.title}}</strong>
+        <p>{{restaurant.description}}</p>
+        <p>{{restaurant.address}}, {{restaurant.civic_number}}, {{restaurant.city}}</p>
+        <p *ngIf="show">{{restaurant.distance}} m ( {{restaurant.time}} min ) </p>
+      </ion-label>
+      <div item-end>
+        <button (click)="navigate(restaurant.lat,restaurant.lng)">
+          <ion-icon name="navigate" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button routerLink="/email"><ion-icon name="add"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>
