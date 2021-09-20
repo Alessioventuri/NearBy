@@ -6,15 +6,15 @@ The goal of this project is to offer users the opportunity to know the points of
 The language of the application is Italian because it was designed to be used initially in my actual city.
 
 
-Link to the whole [paper](HCI_final.pdf) Available only in italian
+Link to the whole [paper](HCI_final.pdf)  (Available only in italian)
 
 
 ### Dependencies
  * [Ionic 6.16.3](https://www.npmjs.com/package/@ionic/cli/v/6.16.3)
  * [Node.js](https://nodejs.org/en/)
  * [Capacitor 7.13.0](https://capacitorjs.com/docs/getting-started/with-ionic)
- * [Google Firebase](https://firebase.google.com/) Used to store the data 
- * [Google Cloud Platform](https://cloud.google.com/) Used to make a custom map
+ * [Google Firebase](https://firebase.google.com/)   used to store the data 
+ * [Google Cloud Platform](https://cloud.google.com/)   used to make a custom map
  
 Inside Ionic, we have installed some dependecies like angular, geolocation
 
@@ -33,7 +33,7 @@ To use locally, you have to download the project. Once downloaded, open the term
 
 To run the project in Android mobile, you have to download the project. Once downloaded, open the terminal and go to the project folder.
  * `cd Nearby`
- * `ionic cap add android` (inside the project, it should already be installed)
+ * `ionic cap add android`   (inside the project, it should already be installed)
  * `ionic cap build`
  * `ionic cap sync`
  * `ionic cap open android`
