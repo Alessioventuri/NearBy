@@ -16,7 +16,9 @@ Link to the whole [paper](HCI_final.pdf)  (Available only in italian)
  * [Google Firebase](https://firebase.google.com/)   used to store the data 
  * [Google Cloud Platform](https://cloud.google.com/)   used to make a custom map
  
-Inside Ionic, we have installed some dependecies like angular, geolocation
+Inside Ionic, we have installed some dependecies like angular, geolocation.
+
+You can follow this [guide](https://ionicframework.com/docs/angular/your-first-app) that is a Ionic tutorial.
 
 ### Pre-requisited
 
